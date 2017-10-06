@@ -16,6 +16,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Circle grass;
+    private Person mike;
     
 
     /**
@@ -58,6 +59,11 @@ public class Picture
         sun.makeVisible();
         sun.moveSun();
         
+        mike = new Person ();
+        mike.changeColor("blue");
+        mike.moveHorizontal(-180);
+        mike.moveVertical(30);
+        mike.changeSize(60,35);
         
         grass = new Circle();
         grass.changeColor("green");
@@ -67,6 +73,12 @@ public class Picture
         grass.makeVisible();
     }
 
+    public void moveSun()
+        {
+            sun.slowMoveVertical(130);
+            mike.makeVisible ();
+            mike.slowMoveHorizontal(130);
+        }
     /**
      * Change this picture to black/white display
      */
