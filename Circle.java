@@ -46,6 +46,14 @@ public class Circle
     }
     
     /**
+     * Make this circle moveSun.
+     */
+    public void moveSun()
+    {
+        slowMoveVertical(130);
+    }
+    
+    /**
      * Move the circle a few pixels to the right.
      */
     public void moveRight()
